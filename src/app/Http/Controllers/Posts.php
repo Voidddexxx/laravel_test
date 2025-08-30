@@ -22,6 +22,6 @@ class Posts extends Controller
     public function store(Request $request) {
         $data = $request->only(['title', 'content']);
         Post::create($data);
-        return redirect('/posts');
+        return redirect()->route('posts.index');
     }
 }

@@ -6,7 +6,7 @@
         max-width: 300px;
     }
 </style>
-<form method="post" action="/posts">
+<form method="post" action="{{ route('posts.store') }}">
     @csrf
     Title: <input type="text" name="title"/>
     Content: <textarea name="content"></textarea>
